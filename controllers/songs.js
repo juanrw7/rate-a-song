@@ -22,7 +22,18 @@ function create(req, res) {
   })
 }
 
+function index(req, res) {
+  Song.find({})
+  .then(songs => {
+    res.render("songs/index", {
+      title: "All of the Songs",
+      songs,
+    })
+  })
+}
+
 export {
   newSong as new,
   create,
+  index,
 }
