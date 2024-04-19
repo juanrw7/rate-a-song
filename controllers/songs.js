@@ -32,8 +32,24 @@ function index(req, res) {
   })
 }
 
+function show (req, res) {
+  Song.findById(req.params.songId)
+  .populate("addedBy")
+  .then(song => {
+    res.render("songs/show", {
+      title: "Song Details",
+      song,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
+}
+
 export {
   newSong as new,
   create,
   index,
+  show,
 }

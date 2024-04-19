@@ -1,0 +1,33 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  
+  <table id="song-details">
+    <tbody>
+      <tr>
+        <td class="details-title">Name:</td>
+        <td><%= song.name %></td>
+      </tr>
+      <tr>
+        <td class="details-title">Artist:</td>
+        <td><%= song.artist %></td>
+      </tr>
+      <tr>
+        <td class="details-title">Released:</td>
+        <td><%= song.releaseYear %></td>
+      </tr>
+      <tr>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td class="details-title">Added By:</td>
+        <td><%= song.addedBy.name %></td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+
+<%- include('../partials/footer') %>
