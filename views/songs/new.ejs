@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form 
+  action="/songs" 
+  method="POST"
+  >
+    <label for="name-input">Song</label>
+    <input type="text" name="name" id="name-input" placeholder="Name of the song">
+    <label for="artist-input">Artist</label>
+    <input type="text" name="artist" id="artist-input" placeholder="Name of the artist">
+    <label for="year-input">Release Year</label>
+    <input type="number" name="releaseYear" id="year-input" min=1700>
+
+    <button type="submit">Add Song</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
