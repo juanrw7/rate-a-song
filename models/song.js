@@ -30,7 +30,7 @@ const songSchema = new Schema({
     min: 1700, 
   },
   addedBy:{type: Schema.Types.ObjectId, ref: "Profile"},
-  review: [reviewSchema],
+  reviews: [reviewSchema],
 }, {
   timestamps: true
 })
