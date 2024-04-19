@@ -14,7 +14,7 @@ function create(req, res) {
   req.body.addedBy = req.user.profile._id
   Song.create(req.body)
   .then(song => {
-    res.redirect("/songs/new")
+    res.redirect("/songs")
   })
   .catch(err => {
     console.log(err)
