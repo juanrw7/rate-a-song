@@ -30,6 +30,10 @@ function index(req, res) {
       songs,
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
 }
 
 function show (req, res) {
