@@ -4,7 +4,11 @@ import * as songsCtrl from "../controllers/songs.js"
 
 const router = Router()
 
+// GET localhost:3000/songs/new
 router.get('/new', isLoggedIn, songsCtrl.new)
+
+// POST localhost:3000/songs
+router.post('/', isLoggedIn, songsCtrl.create)
 
 
 export {

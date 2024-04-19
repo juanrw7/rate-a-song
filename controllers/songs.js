@@ -10,6 +10,19 @@ function newSong(req, res) {
   })
 }
 
+function create(req, res) {
+  req.body.addedBy = req.user.profile._id
+  Song.create(req.body)
+  .then(song => {
+    res.redirect("/songs/new")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 export {
-  newSong as new
+  newSong as new,
+  create,
 }
