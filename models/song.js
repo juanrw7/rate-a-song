@@ -10,6 +10,8 @@ const reviewSchema = new Schema({
   rating: {
     type: Number,
     required: true,
+    min: 1,
+    max: 10,
   },
   author: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
@@ -24,7 +26,8 @@ const songSchema = new Schema({
     required: true
   },
   releaseYear: {
-    type: Number, 
+    type: Number,
+    min: 1700, 
   },
   addedBy:{type: Schema.Types.ObjectId, ref: "Profile"},
   review: [reviewSchema],
