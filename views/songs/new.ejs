@@ -8,11 +8,11 @@
   method="POST"
   >
     <label for="name-input">Song</label>
-    <input type="text" name="name" id="name-input" placeholder="Name of the song">
+    <input type="text" name="name" id="name-input" placeholder="Name of the song" required>
     <label for="artist-input">Artist</label>
-    <input type="text" name="artist" id="artist-input" placeholder="Name of the artist">
+    <input type="text" name="artist" id="artist-input" placeholder="Name of the artist" required>
     <label for="year-input">Release Year</label>
-    <input type="number" name="releaseYear" id="year-input" min=1700>
+    <input type="number" name="releaseYear" id="year-input" min=1700 required>
 
     <button type="submit">Add Song</button>
   </form>
