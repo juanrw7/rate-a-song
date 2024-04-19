@@ -51,9 +51,29 @@ function show (req, res) {
   })
 }
 
+function createReview(req, res) {
+  Song.findById(req.params.songId)
+  .then(song => {
+    song.review.push(req.body)
+    song.save()
+    .then(()=> {
+      res.redirect(`/songs/${song._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("/songs")
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
+}
+
 export {
   newSong as new,
   create,
   index,
   show,
+  createReview,
 }
