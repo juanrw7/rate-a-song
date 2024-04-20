@@ -41,7 +41,36 @@
 
     <button type="submit">Add</button>
   </form>
-  
+
+
+
+  <% if (song.reviews.length) { %>
+    <h3>Here are the reviews</h3>
+    <h3><%= song.reviews.comment %></h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>By</th>
+          <th>Comment</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% song.reviews.forEach(review => { %>
+          <tr>
+            <td><%= review.author.name %></td>
+            <td><%= review.comment %></td>
+            <td><%= review.rating %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+  <% } else {%>
+    <h3>No reviews yet...</h3>
+  <% } %>
+
 </main>
 
 <%- include('../partials/footer') %>

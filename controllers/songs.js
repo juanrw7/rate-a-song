@@ -39,6 +39,7 @@ function index(req, res) {
 function show (req, res) {
   Song.findById(req.params.songId)
   .populate("addedBy")
+  .populate("reviews.author")
   .then(song => {
     res.render("songs/show", {
       title: "Song Details",
@@ -54,6 +55,7 @@ function show (req, res) {
 function createReview(req, res) {
   Song.findById(req.params.songId)
   .then(song => {
+    req.body.author = req.user.profile._id
     song.reviews.push(req.body)
     song.save()
     .then(()=> {
