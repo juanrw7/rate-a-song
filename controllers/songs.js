@@ -54,7 +54,7 @@ function show (req, res) {
 function createReview(req, res) {
   Song.findById(req.params.songId)
   .then(song => {
-    song.review.push(req.body)
+    song.reviews.push(req.body)
     song.save()
     .then(()=> {
       res.redirect(`/songs/${song._id}`)
