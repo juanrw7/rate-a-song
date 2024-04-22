@@ -56,6 +56,7 @@
     <table>
       <thead>
         <tr>
+          <th>Date</th>
           <th>By</th>
           <th>Comment</th>
           <th>Rating</th>
@@ -64,6 +65,7 @@
       <tbody>
         <% song.reviews.forEach(review => { %>
           <tr>
+            <td><%= review.createdAt.toLocaleString('en-US', {month: 'numeric', day: 'numeric', year: '2-digit'}) %></td>
             <td><%= review.author.name %></td>
             <td><%= review.comment %></td>
             <td><%= review.rating %></td>
