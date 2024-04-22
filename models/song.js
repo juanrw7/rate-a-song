@@ -14,6 +14,8 @@ const reviewSchema = new Schema({
     max: 10,
   },
   author: {type: Schema.Types.ObjectId, ref: "Profile"}
+}, {
+  timestamps: true
 })
 
 const songSchema = new Schema({
@@ -31,6 +33,12 @@ const songSchema = new Schema({
   },
   addedBy:{type: Schema.Types.ObjectId, ref: "Profile"},
   reviews: [reviewSchema],
+  theirRating: {
+    type: Number,
+    required: true,
+    min: 1,
+    max: 10,
+  },
 }, {
   timestamps: true
 })

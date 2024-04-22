@@ -25,8 +25,15 @@
         <td class="details-title">Added By:</td>
         <td><%= song.addedBy.name %></td>
       </tr>
+      <tr>        
+        <td class="details-title">Their Rating:</td>
+        <td><%= song.theirRating %></td>
+      </tr>
     </tbody>
   </table>
+
+  <br>
+  <br>
 
   <h2>Reviews</h2>
 
@@ -41,8 +48,6 @@
 
     <button type="submit">Add</button>
   </form>
-
-
 
   <% if (song.reviews.length) { %>
     <h3>Here are the reviews</h3>
