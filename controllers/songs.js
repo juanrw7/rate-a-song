@@ -77,7 +77,7 @@ function deleteSong(req, res) {
   .then(song => {
     if (song.addedBy._id.equals(req.user.profile._id)) {
       song.deleteOne()
-      .then(song => {
+      .then(() => {
         res.redirect("/songs")
       })
       .catch(err => {
@@ -85,7 +85,7 @@ function deleteSong(req, res) {
         res.redirect("/songs")
       })
   } else {
-    res.redirect("/songs")
+    throw new Error('🚫 Not authorized 🚫')
   }
   })
   .catch(err => {
