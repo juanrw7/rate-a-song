@@ -72,10 +72,33 @@ function createReview(req, res) {
   })
 }
 
+function deleteSong(req, res) {
+  Song.findById(req.params.songId)
+  .then(song => {
+    if (song.addedBy._id.equals(req.user.profile._id)) {
+      song.deleteOne()
+      .then(song => {
+        res.redirect("/songs")
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect("/songs")
+      })
+  } else {
+    res.redirect("/songs")
+  }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
+}
+
 export {
   newSong as new,
   create,
   index,
   show,
   createReview,
+  deleteSong as delete,
 }
