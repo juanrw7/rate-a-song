@@ -94,6 +94,38 @@ function deleteSong(req, res) {
   })
 }
 
+function edit(req, res) {
+  Song.findById(req.params.songId)
+  .then(song => {
+    res.render("songs/edit", {
+      title: "Edit This Song",
+      song,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
+}
+
+function update (req, res) {
+  Song.findById(req.params.songId)
+  .then(song => {
+    if (song.addedBy._id.equals(req.user.profile._id)) {
+      song.updateOne(req.body)
+      .then(()=> {
+        res.redirect(`/songs/${song._id}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+    .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
+}
+
 export {
   newSong as new,
   create,
@@ -101,4 +133,6 @@ export {
   show,
   createReview,
   deleteSong as delete,
+  edit,
+  update,
 }

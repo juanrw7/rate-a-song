@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form 
+  action="/songs/<%= song._id %>?_method=PUT " 
+  method="POST"
+  >
+    <label for="name-input">Song</label>
+    <input type="text" name="name" id="name-input" placeholder="Name of the song" required value="<%= song.name %>">
+    <label for="artist-input">Artist</label>
+    <input type="text" name="artist" id="artist-input" placeholder="Name of the artist" required value="<%= song.artist %>">
+    <label for="year-input">Release Year</label>
+    <input type="number" name="releaseYear" id="year-input" min=1700 required value="<%= song.releaseYear %>">
+    <label for="theirRating-input">Your Rating</label>
+    <input type="number" name="theirRating" id="theirRating-input" min=1 max=10 required value="<%= song.theirRating %>">
+
+    <button type="submit">Update Song</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

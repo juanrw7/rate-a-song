@@ -33,7 +33,11 @@
   </table>
   <% if (song.addedBy._id.equals(user.profile._id)) { %>
     <form action="/songs/<%= song._id %>/?_method=DELETE" method="POST">
-      <button type="submit">Delete song 🚮</button>
+      <button type="submit">Delete Song 🚮</button>
+    </form>
+
+    <form action="/songs/<%= song._id %>/edit" method="GET">
+      <button type="submit">Edit Song 🖋️</button>
     </form>
   <% } %>
 

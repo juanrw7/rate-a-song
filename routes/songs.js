@@ -9,13 +9,20 @@ router.get('/', songsCtrl.index)
 router.get('/new', isLoggedIn, songsCtrl.new)
 // GET localhost:3000/songs/:songId
 router.get('/:songId', isLoggedIn, songsCtrl.show)
+// GET localhost:3000/songs/:songId/edit
+router.get('/:songId/edit', isLoggedIn, songsCtrl.edit)
 
 // POST localhost:3000/songs
 router.post('/', isLoggedIn, songsCtrl.create)
 // POST localhost:3000/songs/:songId/reviews
 router.post('/:songId/reviews', isLoggedIn, songsCtrl.createReview)
-
 // POST localhost:3000/songs/:songId/reviews
+
+// PUT localhost:3000/songs/:songId
+router.put('/:songId', isLoggedIn, songsCtrl.update)
+
+
+// DELETE localhost:3000/songs/:songId
 router.delete('/:songId', isLoggedIn, songsCtrl.delete)
 
 export {
