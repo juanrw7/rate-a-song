@@ -15,9 +15,19 @@
     </thead>
     <tbody>
       <% songs.forEach(song => { %>
+        <% let initialRating = 0 %>
+        <% song.reviews.forEach(review => { %>
+          <% initialRating += review.rating %>
+        <% }) %>
+        <% let averageRating = initialRating / song.reviews.length %>
         <tr>
           <td><%= song.name %></td>
-          <td> --  <%#= song.review.rating %>  </td>
+          <td> <% if (averageRating) { %>
+            <%= averageRating %>
+          <% } else {%> 
+            --
+          <% } %>
+          </td>
           <td>
             <form action="/songs/<%= song._id %>"><button id="details-button" type="submit">👁️</button></form>
           </td>
