@@ -60,6 +60,11 @@ button {
   align-items: center;
 }
 
+div#review-form-container label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 div#review-form-container input {
   font-size: 16px;
   background-color: #E2DFD2 ;
