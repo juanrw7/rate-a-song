@@ -66,3 +66,15 @@ i {
   margin: 0 8px 0 8px;
   font-size: 20px;
 }
+
+#logout-button {
+  border-radius: 4px;
+  padding: 4px;
+  border-color: #230c33;
+  border-style: solid;
+  margin-right: 10px;
+}
+
+#logout-button:hover {
+  background-color: #80ffdb;
+}
