@@ -13,7 +13,8 @@ thead {
 
 table thead th {
   padding: 5px;
-  border-bottom: 3px solid #592e83;
+  border-bottom: 3px solid rgba(218, 165, 32, 0.745);
+  color: goldenrod ;
 }
 
 table td {
@@ -33,5 +34,5 @@ table td {
 }
 
 #details-button:hover {
-  background-color: #230c33;
+  background-color: rgba(218, 165, 32, 0.745);
 }
