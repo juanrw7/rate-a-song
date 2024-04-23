@@ -49,4 +49,10 @@ nav > a {
 #page-title {
   font-size: 32px;
   margin-right: 128px;
+  font-weight: bold;
+  color: #230c33;
+}
+
+i {
+  color: #230c33;
 }
