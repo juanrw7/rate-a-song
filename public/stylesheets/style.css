@@ -27,7 +27,7 @@ nav {
   align-items: center;
   padding: 10px;
   min-height: 70px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 main {
@@ -41,18 +41,28 @@ main {
   margin-left: auto;
 }
 
-nav > a {
+a {
   text-decoration: none;
-  margin-left: 16px;
 }
 
 #page-title {
   font-size: 32px;
-  margin-right: 128px;
   font-weight: bold;
   color: #230c33;
+  margin: none;
 }
 
 i {
   color: #230c33;
+}
+
+#oauth-container {
+  width:223.91px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation {
+  margin: 0 8px 0 8px;
+  font-size: 20px;
 }

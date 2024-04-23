@@ -4,11 +4,20 @@
 </head>
 <body>
   <nav>
-    <i class="fas fa-2x fa-solid fa-music"></i>
+    <div id="icon-name-container">
+          <i class="fas fa-2x fa-solid fa-music"></i>
     <a href="/" id="page-title">Rate-a-Song</a>
-    <a href="/songs">All Songs</a>
-    <% if (user) { %>
-      <a href="/songs/new">Add Song</a>
+    </div>
+
+    <div id="navigation-container">
+      <a href="/songs" class="navigation">All Songs</a>
+      <% if (user) { %>
+        <a href="/songs/new" class="navigation">Add Song</a>
+      <% } %>
+    </div>
+
+    <div id="oauth-container">
+          <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>
@@ -29,5 +38,8 @@
         data-shape="rectangular"
         data-logo_alignment="left"
       ></div>
+    </div>
+
+
     <% } %>
   </nav>
