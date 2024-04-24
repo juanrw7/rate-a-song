@@ -95,3 +95,37 @@ div#review-form-container button:hover {
   background-color: rgba(218, 165, 32, 0.745);
   color: #230c33;
 }
+
+
+
+#reviews-table {
+  font-size: 20px;
+  color: #E2DFD2;
+  margin-bottom: 50px;
+}
+table#reviews-table thead {
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+table#reviews-table thead th {
+  padding: 5px;
+  border-bottom: 3px solid rgba(218, 165, 32, 0.745);
+  color: #caa8f5 ;
+  
+}
+
+table#reviews-table td {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#review-comment, #comment-title, #by-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 250px;
+  max-width: 500px;
+  text-align: left;
+}
