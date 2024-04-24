@@ -69,6 +69,7 @@
     <table id="reviews-table">
       <thead>
         <tr>
+          <th></th>
           <th>Date</th>
           <th>By</th>
           <th id="comment-title">Comment</th>
@@ -78,6 +79,18 @@
       <tbody>
         <% song.reviews.forEach(review => { %>
           <tr>
+            <% if (review.author._id.equals(user.profile._id)) { %>
+              <td>
+                <form 
+                action="/songs/<%= song._id %>/reviews/<%= review._id %>?_method=DELETE" 
+                method="POST"
+                >
+                  <button type="submit">🗑️</button>
+                </form>
+              </td>
+            <% } else {%>
+              <td> </td>
+            <% } %>
             <td><%= review.createdAt.toLocaleString('en-US', {month: 'numeric', day: 'numeric', year: '2-digit'}) %></td>
             <td><%= review.author.name %></td>
             <td id="review-comment"><%= review.comment %></td>

@@ -24,6 +24,8 @@ router.put('/:songId', isLoggedIn, songsCtrl.update)
 
 // DELETE localhost:3000/songs/:songId
 router.delete('/:songId', isLoggedIn, songsCtrl.delete)
+// DELETE localhost:3000/songs/:songId/reviews/:reviewId
+router.delete('/:songId/reviews/:reviewId', isLoggedIn, songsCtrl.deleteComment)
 
 export {
   router

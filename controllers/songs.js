@@ -126,6 +126,21 @@ function update (req, res) {
   })
 }
 
+function deleteComment(req, res) {
+  Song.findById(req.params.songId)
+  .then(song => {
+    song.reviews.remove({_id: req.params.reviewId})
+    song.save()
+    .then(()=> {
+      res.redirect(`/songs/${song._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/songs")
+  })
+}
+
 export {
   newSong as new,
   create,
@@ -135,4 +150,5 @@ export {
   deleteSong as delete,
   edit,
   update,
+  deleteComment,
 }
