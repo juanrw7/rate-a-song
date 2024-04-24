@@ -26,7 +26,7 @@ Rate-a-Song uses an icon and favicon image that can be found below:
 + Nodemon
 + MongoDB
 + Google Oauth
-+ Fly
++ Fly.io
 + GitHub
 
 ## Next Steps
