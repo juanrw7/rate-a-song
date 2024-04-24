@@ -132,3 +132,17 @@ table#reviews-table td {
   max-width: 500px;
   text-align: left;
 }
+
+#delete-review-button {
+  background-color: #230c33;
+  border-color: #AD1B18;
+  border-style: solid;
+  color: #230c33;
+  font-weight: bold;
+  padding: 4px;
+}
+
+#delete-review-button:hover {
+  background-color: #AD1B18;
+  border-color: rgba(218, 165, 32, 0.745);
+}
