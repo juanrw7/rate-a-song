@@ -30,7 +30,7 @@ Rate-a-Song uses an icon and favicon image that can be found below:
 + GitHub
 
 ## Next Steps
-+ Allow users to delete their comments
++ Allow users to delete their comments ✅
 + Allow users to add a comment to their posted song and display it with the details of a song
 + Give users the option of adding the name of the album where the song comes from
 + Allow users to see only the songs they have posted
