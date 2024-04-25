@@ -146,8 +146,9 @@ table#reviews-table td {
 
 #delete-review-button {
   background-color: #230c33;
-  border-color: #AD1B18;
-  border-style: solid;
+  border: none;
+  border-left: 2px solid #AD1B18;
+  border-right: 2px solid #AD1B18;
   color: #230c33;
   font-weight: bold;
   padding: 4px;
