@@ -136,14 +136,6 @@ table#reviews-table td {
   border-bottom: 2px solid #1a1a1a;
 }
 
-#date-td {
-  margin-right: 20px;
-}
-
-#review-comment {
-  
-}
-
 #review-comment, #comment-title, #by-title {
   min-width: 250px;
   max-width: 500px;
