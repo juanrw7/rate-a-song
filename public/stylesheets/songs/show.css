@@ -5,14 +5,16 @@ h1 {
   margin: 10px 0 0px 0;
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 4px;
-  border-bottom: 3px solid rgba(218, 165, 32, 0.745);
+  padding: 10px 16px 10px 16px;
+  border-bottom: 4px solid rgba(218, 165, 32, 0.745);
   color: #E2DFD2;
   font-weight: bold;
+  background-color: #592e83;
+  border-radius: 8px;
 }
 
 .details-title {
-  color: rgba(218, 165, 32, 0.85);
+  color: rgba(218, 165, 32, 1);
   display: flex;
   justify-content: right;
   margin: 0 8px 0 0;
@@ -27,11 +29,16 @@ button {
 
 #edit-button, #delete-button {
   margin: 0 8px 0 8px;
-  background-color: #9984d4;
-  border-color: #592e83;
+  background-color: #592e83;
+  border-color: rgba(218, 165, 32, 0.745);
   border-style: solid;
-  color: #230c33;
+  color: #E2DFD2;
   font-weight: bold;
+  padding: 8px;
+  border-left: none;
+  border-style: none;
+  border-top: 2px solid rgba(218, 165, 32, 0.745);
+  border-bottom: 2px solid rgba(218, 165, 32, 0.745) ;
 }
 #edit-button:hover {
   background-color: #FF5733;
@@ -105,6 +112,9 @@ div#review-form-container button:hover {
   font-size: 20px;
   color: #E2DFD2;
   margin-bottom: 50px;
+  background-color: #592e83;
+  border-radius: 8px;
+  padding: 8px 16px;
 }
 table#reviews-table thead {
   font-size: 26px;
@@ -114,20 +124,27 @@ table#reviews-table thead {
 table#reviews-table thead th {
   padding: 5px;
   border-bottom: 3px solid rgba(218, 165, 32, 0.745);
-  color: #caa8f5 ;
-  
+  color: rgba(218, 165, 32, 1);
 }
 
 table#reviews-table td {
-  padding: 10px;
-  text-align: center;
+  padding: 20px 10px 1px 10px;
   font-size: 18px;
 }
 
+#review-comment, #author-td, #date-td {
+  border-bottom: 2px solid #1a1a1a;
+}
+
+#date-td {
+  margin-right: 20px;
+}
+
+#review-comment {
+  
+}
+
 #review-comment, #comment-title, #by-title {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   min-width: 250px;
   max-width: 500px;
   text-align: left;

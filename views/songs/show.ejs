@@ -88,10 +88,10 @@
             <% } else {%>
               <td> </td>
             <% } %>
-            <td><%= review.createdAt.toLocaleString('en-US', {month: 'numeric', day: 'numeric', year: '2-digit'}) %></td>
-            <td><%= review.author.name %></td>
-            <td id="review-comment"><%= review.comment %></td>
-            <td><%= review.rating %></td>
+            <td id="date-td" align="center"><%= review.createdAt.toLocaleString('en-US', {month: 'numeric', day: 'numeric', year: '2-digit'}) %></td>
+            <td id="author-td"><%= review.author.name %></td>
+            <td id="review-comment" align=left><%= review.comment %></td>
+            <td align="center"><%= review.rating %></td>
           </tr>
         <% }) %>
       </tbody>
