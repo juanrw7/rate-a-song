@@ -20,14 +20,15 @@ Rate-a-Song uses an icon and favicon image that can be found below:
 
 
 ## Technologies
-+ Google Oauth
-+ JavaScript
-+ HTML
-+ CSS
++ Google Oauth 
 + Nodemon
-+ MongoDB
-+ Fly.io
-+ GitHub
++ Fly.io    
+
+![alt text](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white "HTML icon")
+![alt text](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white "CSS icon")
+![alt text](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white "MongoDB icon")
+![alt text](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white "GitHub icon")
+
 
 ## Next Steps
 + Allow users to delete their comments ✅
