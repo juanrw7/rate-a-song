@@ -1,6 +1,11 @@
 #form-container {
   font-size: 20px;
   color: white;
+  background-color: #592e83;
+  padding: 16px 36px;
+  border-radius: 16px;
+  border-left: 3px solid rgba(218, 165, 32, 0.745);
+  border-top: 3px solid rgba(218, 165, 32, 0.745);
 }
 
 form {
