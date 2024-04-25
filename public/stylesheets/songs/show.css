@@ -61,13 +61,18 @@ button {
 }
 
 #review-form-container {
-  margin: 20px 0 40px 0;
+  margin: 20px 0 60px 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-evenly;
   font-size: 16px;
   align-items: center;
+  background-color: #592e83;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border-left: 3px solid rgba(218, 165, 32, 0.745);
+  border-right: 3px solid rgba(218, 165, 32, 0.745);
 }
 
 div#review-form-container label {
@@ -80,7 +85,7 @@ div#review-form-container input {
   background-color: #E2DFD2 ;
   border-radius: 6px;
   padding: 4px;
-  height: 30px;
+  height: 33px;
   border: none;
   margin-right: 12px;
 }
@@ -99,6 +104,7 @@ div#review-form-container button {
   color: #230c33;
   font-weight: bold;
   padding: 7px;
+  height: 33px;
 }
 
 div#review-form-container button:hover {
