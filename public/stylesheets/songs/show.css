@@ -115,6 +115,8 @@ div#review-form-container button:hover {
   background-color: #592e83;
   border-radius: 8px;
   padding: 8px 16px;
+  border-left: 3px solid rgba(218, 165, 32, 0.745);
+  border-right: 3px solid rgba(218, 165, 32, 0.745);
 }
 table#reviews-table thead {
   font-size: 26px;
@@ -132,7 +134,7 @@ table#reviews-table td {
   font-size: 18px;
 }
 
-#review-comment, #author-td, #date-td {
+#review-comment, #author-td, #date-td, #separator-td {
   border-bottom: 2px solid #1a1a1a;
 }
 
@@ -154,4 +156,16 @@ table#reviews-table td {
 #delete-review-button:hover {
   background-color: #AD1B18;
   border-color: rgba(218, 165, 32, 0.745);
+}
+
+#rating-holder {
+  width: 35px;
+  height: 35px;
+  border: none;
+  color: #E2DFD2;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #592e83;
+  border-bottom: 3px solid rgba(218, 165, 32, 0.745);
+  border-top: 3px solid #592e83;
 }

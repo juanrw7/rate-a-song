@@ -68,7 +68,9 @@
         <tr>
           <th></th>
           <th>Date</th>
+          <th></th>
           <th>By</th>
+          <th></th>
           <th id="comment-title">Comment</th>
           <th>Rating</th>
         </tr>
@@ -89,9 +91,15 @@
               <td> </td>
             <% } %>
             <td id="date-td" align="center"><%= review.createdAt.toLocaleString('en-US', {month: 'numeric', day: 'numeric', year: '2-digit'}) %></td>
-            <td id="author-td"><%= review.author.name %></td>
+            <td> </td>
+            <td id="author-td" align="right"><%= review.author.name %></td>
+            <td id="separator-td">-</td>
             <td id="review-comment" align=left><%= review.comment %></td>
-            <td align="center"><%= review.rating %></td>
+            <td align="center">
+              <button id="rating-holder">
+                <%= review.rating %>
+              </button>
+            </td>
           </tr>
         <% }) %>
       </tbody>
