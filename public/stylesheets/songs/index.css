@@ -5,10 +5,10 @@ h1 {
 table {
   font-size: 20px;
   color: #E2DFD2;
+  font-weight: bolder;
 }
 thead {
   font-size: 26px;
-  font-weight: bolder;
 }
 
 table thead th {
@@ -18,12 +18,11 @@ table thead th {
 }
 
 table td {
-  padding: 10px 0;
-  text-align: center;
+  padding: 25px 0 25px 0;
 }
 
 #details-button {
-  background-color: #9984d4;
+  background-color: #230c33;
   border-radius: 8px;
   border-style: ridge;
   height: 30px;
@@ -37,8 +36,23 @@ table td {
   background-color: rgba(218, 165, 32, 0.745);
 }
 
-#name-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+#rating-holder {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  color: #E2DFD2;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #592e83;
+  border-bottom: 3px solid rgba(218, 165, 32, 0.745);
+  border-top: 3px solid #592e83;
+}
+
+#songs-list {
+  background-color: #592e83;
+  border-radius: 8px;
+  padding: 8px;
+  border-bottom: 4px solid rgba(218, 165, 32, 0.745);
+  border-top: 4px solid rgba(218, 165, 32, 0.745);
 }

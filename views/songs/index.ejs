@@ -22,14 +22,16 @@
         <% }) %>
         <% let averageRating = initialRating / song.reviews.length %>
         <tr>
-          <td id="name-section"><%= song.name %></td>
-          <td> <% if (averageRating) { %>
-            <%= averageRating.toFixed() %>
+          <td id="name-section" align="right"><%= song.name %></td>
+          <td align="center"> <% if (averageRating) { %>
+            <button id="rating-holder">
+              <%= averageRating.toFixed() %>
+            </button>
           <% } else {%> 
             --
           <% } %>
           </td>
-          <td>
+          <td align="center">
             <form action="/songs/<%= song._id %>"><button id="details-button" type="submit">👁️</button></form>
           </td>
         </tr>

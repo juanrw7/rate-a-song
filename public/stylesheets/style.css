@@ -63,8 +63,10 @@ i {
 }
 
 .navigation {
-  margin: 0 8px 0 8px;
+  margin: 0 10px 0 10px;
   font-size: 20px;
+  color: #230c33;
+  font-weight: bold;
 }
 
 #logout-button {
