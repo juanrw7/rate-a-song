@@ -99,8 +99,8 @@ div#review-form-container button {
   font-size: 16px;
   border-radius: 8px;
   border-color: rgba(218, 165, 32, 0.745);
-  border-style: solid;
-  background-color: #9984d4 ;
+  border-style: ridge;
+  background-color: #caa8f5 ;
   color: #230c33;
   font-weight: bold;
   padding: 7px;
@@ -123,7 +123,7 @@ div#review-form-container button:hover {
   padding: 8px 16px;
   border-left: 3px solid rgba(218, 165, 32, 0.745);
   border-right: 3px solid rgba(218, 165, 32, 0.745);
-  margin-bottom: 70px;
+    margin-bottom: 70px;
 }
 table#reviews-table thead {
   font-size: 26px;
